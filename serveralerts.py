@@ -135,14 +135,11 @@ def serveralerts( key, value):
 				msg["Subject"] = "󾭦 "+key+"is UP :"+str(genarray[key]["sta"])+" ("+hts[genarray[key]["sta"]]+") ("+genarray[key]["ctres"]+")"
 				p = Popen(["/usr/sbin/sendmail", "-t", "-oi"], stdin=PIPE)
 				p.communicate(msg.as_string())
-				
-				#print surl+": "+str(genarray[key]["sta"])+"-"+genarray[key]["ctres"]
 				genarray[key]["sct"]=0
 				genarray[key]["ctd2"]=""
 				genarray[key]["ctres"]=""
 
 
-		
 a1=threading.Thread(name='goog',target=serveralerts,args=("google","https://www.google.com/"))
 a1.daemon = True
 a1.start()
