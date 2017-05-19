@@ -143,10 +143,10 @@ def serveralerts( key, value):
 
 
 		
-a1=threading.Thread(name='ct',target=serveralerts,args=("google","https://www.google.com/"))
+a1=threading.Thread(name='goog',target=serveralerts,args=("google","https://www.google.com/"))
 a1.daemon = True
 a1.start()
-a2=threading.Thread(name='mct',target=serveralerts,args=("yahoo","https://www.yahoo.com"))
+a2=threading.Thread(name='yaho',target=serveralerts,args=("yahoo","https://www.yahoo.com"))
 a2.daemon = True
 a2.start()
 
