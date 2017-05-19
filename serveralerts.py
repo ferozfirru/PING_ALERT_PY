@@ -3,6 +3,7 @@
 #by ferz
 
 import requests
+#you need to install requests package
 import time
 import datetime
 import threading
